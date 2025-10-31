@@ -1,12 +1,7 @@
 services:
   censudex-orders:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_HTTP_PORTS=8080
-      - ASPNETCORE_HTTPS_PORTS=8081
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=YourSecurePassword123!
-      - ConnectionStrings__Database=server=mysql;port=3306;database=auth;uid=root;pwd=rootpassword;
+    env_file:
+      - .env.development
     depends_on:
       orders-db:
         condition: service_healthy
