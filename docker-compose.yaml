@@ -1,0 +1,10 @@
+services:
+  censudex-orders:
+    image: ${DOCKER_REGISTRY-}censudex-orders
+    build:
+      context: .
+  orders-db:
+    image: mysql:9.4.0
+
+volumes:
+  mysql_data: {}
