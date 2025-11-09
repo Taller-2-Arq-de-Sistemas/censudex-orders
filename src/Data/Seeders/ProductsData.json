@@ -1,0 +1,602 @@
+[
+  {
+    "id": "adba7c62-f798-43b8-b638-f14a5a633fb9",
+    "name": "Dog Waste Bag Dispenser",
+    "stock": 24,
+    "price": 12791
+  },
+  {
+    "id": "26f1b964-f57d-4acf-a846-db6d17f2c5af",
+    "name": "Sun-Dried Tomatoes",
+    "stock": 73,
+    "price": 42702
+  },
+  {
+    "id": "1e667c79-5d6d-436c-b694-4201ea21ac60",
+    "name": "Apple Juice",
+    "stock": 51,
+    "price": 52128
+  },
+  {
+    "id": "a9482768-d528-4aeb-8882-f98d127b284c",
+    "name": "Blackberry Compote",
+    "stock": 3,
+    "price": 89403
+  },
+  {
+    "id": "d8568435-9abc-440c-91d2-2f6581bc5ef5",
+    "name": "Sweet Potatoes",
+    "stock": 3,
+    "price": 32966
+  },
+  {
+    "id": "e89495c3-89fe-4a90-a2a4-667b0bfdd93d",
+    "name": "Energy Bites",
+    "stock": 63,
+    "price": 62622
+  },
+  {
+    "id": "aca477b4-8ce9-4013-ba04-913319af16d0",
+    "name": "Wireless Charging Pad",
+    "stock": 40,
+    "price": 69940
+  },
+  {
+    "id": "3119f5c4-5007-4682-9953-5338f05c024e",
+    "name": "Pleated Midi Dress",
+    "stock": 44,
+    "price": 69510
+  },
+  {
+    "id": "43b15a94-9eca-4eab-a5a3-0a48144e0360",
+    "name": "Personal Blender with Travel Lid",
+    "stock": 11,
+    "price": 75831
+  },
+  {
+    "id": "8e902066-56f5-4c94-8cd2-746353f7dcce",
+    "name": "Peach Mango Smoothie",
+    "stock": 78,
+    "price": 48566
+  },
+  {
+    "id": "43eb569e-0f3e-4b61-a392-1063a06d0e7e",
+    "name": "Wrap Front Midi Skirt",
+    "stock": 43,
+    "price": 55604
+  },
+  {
+    "id": "bef339af-8c63-42e2-9af5-0b053a91a8be",
+    "name": "Pizza Stone",
+    "stock": 37,
+    "price": 39119
+  },
+  {
+    "id": "a80fbbc3-b54c-4385-9004-983460f1883c",
+    "name": "Sun-Dried Tomato Pesto",
+    "stock": 40,
+    "price": 64594
+  },
+  {
+    "id": "86875949-eb31-4d17-a414-eb6145f84ba5",
+    "name": "Car Phone Mount",
+    "stock": 66,
+    "price": 89298
+  },
+  {
+    "id": "2111e675-8063-4406-aae9-20e8f568b31d",
+    "name": "Set of Silicone Baking Molds",
+    "stock": 44,
+    "price": 70024
+  },
+  {
+    "id": "ca01a146-6d2a-4e37-b86d-b4562d036650",
+    "name": "Garlic Naan Bread",
+    "stock": 27,
+    "price": 89212
+  },
+  {
+    "id": "a211ad55-600c-4264-99eb-eb666dc3ba8a",
+    "name": "Organic Lentil Soup",
+    "stock": 75,
+    "price": 36445
+  },
+  {
+    "id": "24f071f0-f343-4852-b4e7-d734fa4ca6ec",
+    "name": "Compact Folding Table",
+    "stock": 89,
+    "price": 8606
+  },
+  {
+    "id": "de7b6fc6-14bf-4501-be10-2d5c0dfa0010",
+    "name": "Rechargeable Electric Screwdriver",
+    "stock": 34,
+    "price": 55946
+  },
+  {
+    "id": "0a7618d1-3fac-493b-ba7f-326e3152a588",
+    "name": "Lemon Sorbet",
+    "stock": 70,
+    "price": 86072
+  },
+  {
+    "id": "1e67bee8-92dc-4fc7-ba40-ebd7043dfd65",
+    "name": "Vanilla Protein Powder",
+    "stock": 97,
+    "price": 35533
+  },
+  {
+    "id": "37085166-0204-4100-897b-803910815dd4",
+    "name": "Inspirational Wall Art",
+    "stock": 14,
+    "price": 22823
+  },
+  {
+    "id": "785cc65d-c27b-43ef-b97c-7e919fc41038",
+    "name": "Organic Apples",
+    "stock": 17,
+    "price": 33278
+  },
+  {
+    "id": "5ea4b7b3-7af2-4690-99db-a28a43b452aa",
+    "name": "Body Wash",
+    "stock": 28,
+    "price": 32221
+  },
+  {
+    "id": "0ef312df-7400-483d-92b6-699016c0a09f",
+    "name": "Suction Cup Hooks",
+    "stock": 74,
+    "price": 24083
+  },
+  {
+    "id": "846c6c51-8e97-4952-ba20-a159faccdf32",
+    "name": "Frozen Chicken Nuggets",
+    "stock": 68,
+    "price": 11840
+  },
+  {
+    "id": "a71414e8-5deb-4ab3-9883-0aff987ca38e",
+    "name": "Foldable Picnic Table",
+    "stock": 25,
+    "price": 75668
+  },
+  {
+    "id": "07430bbd-7738-450a-9303-ef2410f7b1f3",
+    "name": "Organic Coconut Flakes",
+    "stock": 52,
+    "price": 31249
+  },
+  {
+    "id": "25a3471a-bd42-4b89-9cf8-8c26cb01109e",
+    "name": "Deluxe First Aid Kit",
+    "stock": 21,
+    "price": 48524
+  },
+  {
+    "id": "8609612c-ffe2-4470-a720-8622cc7145e2",
+    "name": "Spinach and Feta Stuffed Chicken Breast",
+    "stock": 34,
+    "price": 61835
+  },
+  {
+    "id": "2fe90e47-fce4-4934-aef3-3038360aadfa",
+    "name": "Under Desk Footrest",
+    "stock": 28,
+    "price": 56313
+  },
+  {
+    "id": "6fc68066-656c-40ea-8ae8-8a1c7e0373e2",
+    "name": "Quality Chef Apron",
+    "stock": 12,
+    "price": 64197
+  },
+  {
+    "id": "009a086f-a299-465f-9b67-98c5c4cf9722",
+    "name": "Wooden Puzzle Game",
+    "stock": 72,
+    "price": 89558
+  },
+  {
+    "id": "29d615ac-81e8-4d07-9a6b-95c9e4c1170b",
+    "name": "Home Cleaning Robot",
+    "stock": 92,
+    "price": 13113
+  },
+  {
+    "id": "4cd37b83-6069-4091-aac6-b03d5be30481",
+    "name": "Telescope",
+    "stock": 69,
+    "price": 58933
+  },
+  {
+    "id": "80cac717-5e42-4f46-b9ba-a250bd6b903d",
+    "name": "Digital Kitchen Timer",
+    "stock": 6,
+    "price": 53065
+  },
+  {
+    "id": "13d36c47-a25c-4fd0-9967-6385c2bb8c8c",
+    "name": "Dark Chocolate Covered Pretzels",
+    "stock": 33,
+    "price": 56846
+  },
+  {
+    "id": "966ced1b-9a01-45e3-b915-6ebc38da4e67",
+    "name": "Savory Italian Herbs",
+    "stock": 25,
+    "price": 69597
+  },
+  {
+    "id": "e4ff7a1c-ed94-4213-96c1-44091c3509b6",
+    "name": "Fitness Mat",
+    "stock": 2,
+    "price": 60385
+  },
+  {
+    "id": "d0323a61-854f-451c-ba6d-5c0add14fdf7",
+    "name": "Honey Ginger Tea",
+    "stock": 22,
+    "price": 8881
+  },
+  {
+    "id": "bd7cd622-46c6-4cc0-9bde-a17a6edcae8e",
+    "name": "Backpacking Tent",
+    "stock": 98,
+    "price": 26801
+  },
+  {
+    "id": "b22d091c-bed3-4901-a2aa-80f1b3a4f24c",
+    "name": "Ground Cinnamon",
+    "stock": 97,
+    "price": 45602
+  },
+  {
+    "id": "493fedc6-1c8f-460c-832a-a993260d06b5",
+    "name": "Dish Soap Dispenser",
+    "stock": 88,
+    "price": 36938
+  },
+  {
+    "id": "143b755c-9c76-4673-ac44-a821c9b28bd4",
+    "name": "Compact Folding Table",
+    "stock": 37,
+    "price": 2432
+  },
+  {
+    "id": "de4d3b1e-6fc7-462e-b6d4-13149b28f908",
+    "name": "Glass Food Containers",
+    "stock": 9,
+    "price": 30619
+  },
+  {
+    "id": "31b25445-2596-4cae-b43d-583a4ce0a3be",
+    "name": "Fresh Cilantro",
+    "stock": 91,
+    "price": 37390
+  },
+  {
+    "id": "78ef0886-481f-4c7b-bd7c-5e40ae87acd4",
+    "name": "Coconut Chia Pudding",
+    "stock": 76,
+    "price": 65758
+  },
+  {
+    "id": "a2434296-5637-40bd-bf54-a6e648e68c59",
+    "name": "Chocolate Hazelnut Granola",
+    "stock": 89,
+    "price": 92569
+  },
+  {
+    "id": "9a75f028-8077-4ae6-b019-02338e29ccfb",
+    "name": "Yoga Mat",
+    "stock": 39,
+    "price": 99556
+  },
+  {
+    "id": "cea14d99-752c-4c9b-bf6d-51ac5418e1c4",
+    "name": "Pumpkin Spice Latte Mix",
+    "stock": 53,
+    "price": 5639
+  },
+  {
+    "id": "8f7b0191-ad9a-4dab-a5e4-9653eaf07a7e",
+    "name": "Gardening Tool Belt",
+    "stock": 37,
+    "price": 38326
+  },
+  {
+    "id": "04269adf-e1a9-4bcb-b71d-26bbffcc14ae",
+    "name": "Almond Coconut Granola",
+    "stock": 80,
+    "price": 75107
+  },
+  {
+    "id": "fbb5c972-91a6-4475-9829-d8b6db67f01c",
+    "name": "Oven-Baked Parmesan Zucchini",
+    "stock": 74,
+    "price": 86386
+  },
+  {
+    "id": "0bfe1f4c-72d3-45fc-b5da-0c7e56ebb244",
+    "name": "Digital Voice Recorder",
+    "stock": 96,
+    "price": 13179
+  },
+  {
+    "id": "a7e0ea97-a80a-4d84-9337-ebf97cf2bade",
+    "name": "Pet Grooming Kit",
+    "stock": 95,
+    "price": 21310
+  },
+  {
+    "id": "6cc29470-158d-49a2-991b-dc6c35c0c043",
+    "name": "High-Speed HDMI Cable",
+    "stock": 24,
+    "price": 40631
+  },
+  {
+    "id": "1bc51a7a-28e7-435c-94ab-fcaf2082b679",
+    "name": "Garden Tool Belt",
+    "stock": 100,
+    "price": 42479
+  },
+  {
+    "id": "2012432f-2f0b-4e1b-a540-c4e32f7f8c0c",
+    "name": "Organic Green Tea",
+    "stock": 98,
+    "price": 42210
+  },
+  {
+    "id": "fc47c3fb-b09f-4dd4-998e-ec15bf26bcbb",
+    "name": "Training Soccer Ball",
+    "stock": 17,
+    "price": 54517
+  },
+  {
+    "id": "547f8d2c-f0e2-43e9-a5de-623563718e70",
+    "name": "Almond Flour Bread Mix",
+    "stock": 28,
+    "price": 99771
+  },
+  {
+    "id": "055de2f7-6720-4596-bdf6-b9d474a8c1be",
+    "name": "Savory Mushroom Risotto",
+    "stock": 83,
+    "price": 51225
+  },
+  {
+    "id": "32beb688-a032-4818-ab0c-875ddac96dc3",
+    "name": "Hibiscus Herbal Tea",
+    "stock": 45,
+    "price": 15285
+  },
+  {
+    "id": "d4c8edc1-d8c1-493e-8914-59e833fb04ed",
+    "name": "Maple Chipotle Glaze",
+    "stock": 25,
+    "price": 40622
+  },
+  {
+    "id": "75844391-ce5d-473e-bffa-36d6d9ff0fa0",
+    "name": "Sweet and Sour Sauce",
+    "stock": 11,
+    "price": 70937
+  },
+  {
+    "id": "3dae4c26-1a03-47c2-91da-c55830fae4fd",
+    "name": "Ethical Wool Scarf",
+    "stock": 78,
+    "price": 54608
+  },
+  {
+    "id": "ee338aa0-0c63-4f36-b218-2e0534c44fad",
+    "name": "Savory Oatmeal Cups",
+    "stock": 37,
+    "price": 61112
+  },
+  {
+    "id": "cdb5e43f-e310-4909-8535-ef200e36cab2",
+    "name": "Sparkling Blood Orange Soda",
+    "stock": 31,
+    "price": 94463
+  },
+  {
+    "id": "147f8645-0fef-416c-8ce2-84ec9f7465dd",
+    "name": "Spicy Chicken Wings",
+    "stock": 86,
+    "price": 79815
+  },
+  {
+    "id": "eb27e360-f077-48ca-9ef3-0fcff130e49a",
+    "name": "Cinnamon Sugar Popcorn",
+    "stock": 89,
+    "price": 49761
+  },
+  {
+    "id": "82a42aa3-1509-495d-8b9d-85c3aef9f85b",
+    "name": "Spicy Garlic Edamame",
+    "stock": 74,
+    "price": 83823
+  },
+  {
+    "id": "2037b9f4-11ba-4460-b12a-99b66ff4bebd",
+    "name": "Portable Solar Camp Shower",
+    "stock": 9,
+    "price": 9350
+  },
+  {
+    "id": "772fd5cd-6ca9-477c-af7c-af76caa29877",
+    "name": "Classic Slim Fit Shirt",
+    "stock": 55,
+    "price": 58967
+  },
+  {
+    "id": "f213f682-38f8-4b2c-ab45-8dc36db1296c",
+    "name": "Kettle Corn Popcorn",
+    "stock": 86,
+    "price": 85921
+  },
+  {
+    "id": "478356e6-8d56-4948-81de-ece29f60aeb8",
+    "name": "Classic Leather Wallet",
+    "stock": 67,
+    "price": 14793
+  },
+  {
+    "id": "e9d6f8d9-d2d6-4148-9e0f-d9dbb98f6c97",
+    "name": "Pumpkin Spice Cookies",
+    "stock": 51,
+    "price": 49965
+  },
+  {
+    "id": "3cc27bc0-0dba-4020-868b-25ddc20cbcbd",
+    "name": "Ice Cream",
+    "stock": 69,
+    "price": 92095
+  },
+  {
+    "id": "d8132bc1-0791-411a-a40d-e6f586dd690a",
+    "name": "Pumpkin Spice Pancake Mix",
+    "stock": 96,
+    "price": 27954
+  },
+  {
+    "id": "43667084-7db6-4e44-b603-113287286546",
+    "name": "Pet Caress Brush",
+    "stock": 59,
+    "price": 24423
+  },
+  {
+    "id": "ddcf1f69-5e1f-483b-9efb-6cb3ea20573a",
+    "name": "Quinoa & Black Bean Salad",
+    "stock": 56,
+    "price": 8508
+  },
+  {
+    "id": "7cb9b341-ab1a-4dfa-851b-6253094a62fd",
+    "name": "Honey Almond Granola Bars",
+    "stock": 48,
+    "price": 55008
+  },
+  {
+    "id": "eb766ce4-ae13-4bdb-ba0c-cffaac8ec90d",
+    "name": "Watercolor Set",
+    "stock": 58,
+    "price": 1985
+  },
+  {
+    "id": "eb39813a-e7b4-4d24-8a2d-09698650c621",
+    "name": "Dog Waste Bag Dispenser",
+    "stock": 68,
+    "price": 90408
+  },
+  {
+    "id": "6b61a5cb-190d-405f-904b-b1c2ac163259",
+    "name": "Honey Sesame Chicken Mix",
+    "stock": 32,
+    "price": 2834
+  },
+  {
+    "id": "63450bb4-91d3-4a4c-bb0a-26d8c3ad5e2e",
+    "name": "Brownie Bites",
+    "stock": 45,
+    "price": 64145
+  },
+  {
+    "id": "26ee66e2-c297-4e42-8d2f-faf8fc9a3b78",
+    "name": "Chocolate Chip Muffins",
+    "stock": 58,
+    "price": 69430
+  },
+  {
+    "id": "ec1f66e5-670a-43aa-bd4d-c552cccc80d3",
+    "name": "Sooji (Semolina)",
+    "stock": 38,
+    "price": 65153
+  },
+  {
+    "id": "1d54c5b2-fc2c-4997-a27b-082b8c4646fc",
+    "name": "Butternut Squash Ravioli",
+    "stock": 19,
+    "price": 41046
+  },
+  {
+    "id": "6123c355-5858-43cb-b18b-549f6a84d192",
+    "name": "Smartphone Hand Grip",
+    "stock": 46,
+    "price": 23937
+  },
+  {
+    "id": "283e4f63-be5d-4edf-b9ff-acd759e7951d",
+    "name": "Indoor Plants",
+    "stock": 15,
+    "price": 88427
+  },
+  {
+    "id": "2dea3baa-e8a5-4b8f-8385-ac20d8226620",
+    "name": "Balsamic Glaze",
+    "stock": 6,
+    "price": 6417
+  },
+  {
+    "id": "27ffd60e-963a-41c9-851d-a4d3d9cf5c9d",
+    "name": "Sliced Cheese",
+    "stock": 79,
+    "price": 99269
+  },
+  {
+    "id": "0949e78d-b9ab-44bf-a13e-a17bcda86ed0",
+    "name": "Frozen Edamame",
+    "stock": 20,
+    "price": 72147
+  },
+  {
+    "id": "4a494122-6006-45c0-8ccf-921891247920",
+    "name": "Portable Hammock",
+    "stock": 67,
+    "price": 78870
+  },
+  {
+    "id": "6dca88eb-7fec-4d10-bb93-a42342f5b4e9",
+    "name": "Digital Photo Frame",
+    "stock": 6,
+    "price": 56595
+  },
+  {
+    "id": "a0e5a447-e07a-40ab-8199-938615a170da",
+    "name": "LED Desk Lamp with USB Charging",
+    "stock": 92,
+    "price": 55014
+  },
+  {
+    "id": "40f17663-f5fa-4e9a-8f40-60cf08e7a47e",
+    "name": "Honey Mustard Chicken Breasts",
+    "stock": 1,
+    "price": 86808
+  },
+  {
+    "id": "caa662be-66ba-4c1b-b806-91b4974d599d",
+    "name": "Spinach Artichoke Dip",
+    "stock": 47,
+    "price": 54552
+  },
+  {
+    "id": "ddca9054-1526-43f2-8357-1582dd58a190",
+    "name": "Spinach Pizza Rolls",
+    "stock": 55,
+    "price": 70307
+  },
+  {
+    "id": "038f0215-6763-40dd-be39-98b397c5add2",
+    "name": "Smartphone Tripod with Bluetooth Remote",
+    "stock": 6,
+    "price": 22047
+  },
+  {
+    "id": "d5447058-3011-49c6-aa8f-75bff76fd2d2",
+    "name": "Sliced Strawberries",
+    "stock": 39,
+    "price": 71396
+  }
+]
