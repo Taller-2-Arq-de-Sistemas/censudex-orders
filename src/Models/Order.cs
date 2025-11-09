@@ -8,4 +8,6 @@ public class Order
     public int TotalCharge { get; set; }
     public DateTime CreatedAt { get; set; }
     public Guid CustomerId { get; set; }
+    public User Customer { get; set; } = default!;
+    public ICollection<OrderProducts> OrderProducts { get; set; } = [];
 }
