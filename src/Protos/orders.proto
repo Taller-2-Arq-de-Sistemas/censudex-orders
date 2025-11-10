@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+option csharp_namespace = "CensudexOrders.Protos";
+
+import "google/protobuf/timestamp.proto";
+
+package orders;
+
+service OrdersProtoService {
+    rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse);
+    rpc GetOrdersByUserId (GetOrdersByUserIdRequest) returns (GetOrdersByUserIdResponse);
+    rpc GetOrderByNumber (GetOrderByNumberRequest) returns (GetOrderByNumberResponse);
+    rpc UpdateOrderStatus (UpdateOrderStatusRequest) returns (UpdateOrderStatusResponse);
+    rpc CancelOrder (CancelOrderRequest) returns (CancelOrderResponse);
+    rpc GetAllUserOrders (GetAllUserOrdersRequest) returns (GetAllUserOrdersResponse);
+}
+
+message ProductOrdered {
+    string productId = 1;
+    int32 quantity = 2;
+}
+
+message CreateOrderRequest {
+    string customerId = 1;
+    repeated ProductOrdered products = 2;
+}
+
+message CreateOrderResponse {
+    int32 status = 1;
+}
+
+message Order {
+    string id = 1;
+    int32 orderNumber = 2;
+    string status = 3;
+    int32 totalCharge = 4;
+    google.protobuf.Timestamp createdAt = 5;
+    string customerId = 6;
+}
+
+message GetOrdersByUserIdRequest {
+    string userId = 1;
+}
+
+message GetOrdersByUserIdResponse {
+    repeated Order orders = 1;
+}
+
+message GetOrderByNumberRequest {
+    int32 orderNumber = 1;
+}
+
+message GetOrderByNumberResponse {
+    Order order = 1;
+}
+
+message UpdateOrderStatusRequest {
+    int32 orderNumber = 1;
+    string newStatus = 2;
+}
+
+message UpdateOrderStatusResponse {
+    bool success = 1;
+}
+
+message CancelOrderRequest {
+    int32 orderNumber = 1;
+}
+
+message CancelOrderResponse {
+    bool success = 1;
+}
+
+message GetAllUserOrdersRequest {
+    string userId = 1;
+}
+
+message GetAllUserOrdersResponse {
+    repeated Order orders = 1;
+}
