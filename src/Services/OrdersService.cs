@@ -1,6 +1,7 @@
 using Grpc.Core;
 using Mapster;
 using CensudexOrders.Orders.Commands;
+using CensudexOrders.Orders.Queries;
 using CensudexOrders.Protos;
 using MediatR;
 
@@ -14,6 +15,14 @@ public class OrdersService(ISender sender) : OrdersProtoService.OrdersProtoServi
         var command = request.Adapt<CreateOrderCommand>();
         var result = await sender.Send(command, context.CancellationToken);
         var response = result.Adapt<CreateOrderResponse>();
+        return response;
+    }
+
+    public override async Task<GetOrdersByUserIdResponse> GetOrdersByUserId(GetOrdersByUserIdRequest request, ServerCallContext context)
+    {
+        var query = request.Adapt<GetOrdersByUserIdQuery>();
+        var result = await sender.Send(query, context.CancellationToken);
+        var response = result.Adapt<GetOrdersByUserIdResponse>();
         return response;
     }
 }
