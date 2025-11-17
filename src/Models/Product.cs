@@ -6,5 +6,6 @@ public class Product
     public string Name { get; set; } = default!;
     public int Price { get; set; }
     public int Stock { get; set; }
+    public bool IsActive { get; set; } = true;
     public ICollection<OrderProducts> OrderProducts { get; set; } = [];
 }
