@@ -1,13 +1,14 @@
 using CensudexOrders.CQRS;
 using CensudexOrders.Models;
 using CensudexOrders.Repositories.Interfaces;
+using CensudexOrders.Services.Interfaces;
 using FluentValidation;
 
 namespace CensudexOrders.Orders.Commands;
 
 public record CreateOrderCommand(string CustomerId, List<OrderItem> Products) : ICommand<CreateOrderResult>;
 public record OrderItem(string ProductId, int Quantity);
-public record CreateOrderResult(int Status);
+public record CreateOrderResult(Order Order);
 public class CreateOrderCommandValidator
 : AbstractValidator<CreateOrderCommand>
 {
@@ -28,13 +29,15 @@ public class CreateOrderCommandValidator
     }
 }
 
-internal class CreateOrderCommandHandler(IUnitOfWork unitOfWork)
+internal class CreateOrderCommandHandler(IUnitOfWork unitOfWork, ISendGridService sendGridService)
 : ICommandHandler<CreateOrderCommand, CreateOrderResult>
 {
     public async Task<CreateOrderResult> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
-        if (!await unitOfWork.UsersRepository.Exists(Guid.Parse(request.CustomerId), cancellationToken))
+        var customer = await unitOfWork.UsersRepository.Get(Guid.Parse(request.CustomerId), cancellationToken) ??
             throw new ValidationException($"Customer with ID {request.CustomerId} does not exist.");
+        if (!customer.IsActive)
+            throw new ValidationException($"Customer with ID {request.CustomerId} is no longer active.");
 
         var orderId = Guid.NewGuid();
         int totalCharge = 0;
@@ -43,9 +46,13 @@ internal class CreateOrderCommandHandler(IUnitOfWork unitOfWork)
         {
             var product = await unitOfWork.ProductsRepository.GetById(Guid.Parse(item.ProductId), cancellationToken) ??
                 throw new ValidationException($"Product with ID {item.ProductId} does not exist.");
+            if (!product.IsActive)
+                throw new ValidationException($"Product with ID {item.ProductId} is no longer available.");
             if (product.Stock < item.Quantity)
                 throw new ValidationException($"Insufficient stock for product with ID {item.ProductId}.");
             totalCharge += product.Price * item.Quantity;
+            product.Stock -= item.Quantity;
+            unitOfWork.ProductsRepository.Update(product, cancellationToken);
 
             products.Add(new OrderProducts
             {
@@ -60,14 +67,27 @@ internal class CreateOrderCommandHandler(IUnitOfWork unitOfWork)
         {
             Id = orderId,
             CustomerId = Guid.Parse(request.CustomerId),
-            Status = "Created",
+            Status = "pendiente",
             TotalCharge = totalCharge,
             CreatedAt = DateTime.UtcNow,
         };
 
         unitOfWork.OrdersRepository.Create(order, cancellationToken);
         unitOfWork.OrderProductsRepository.AddProductsToOrder(products, cancellationToken);
+
+        order.RaiseOrderCreatedEvent();
+
         await unitOfWork.SaveChangesAsync(cancellationToken);
-        return new CreateOrderResult(201);
+
+        await sendGridService.SendOrderConfirmationAsync(
+            customer.Email,
+            customer.Name,
+            order.OrderNumber,
+            order.CreatedAt.ToString("yyyy-MM-dd"),
+            order.Status,
+            order.TotalCharge
+        );
+
+        return new CreateOrderResult(order);
     }
 }
