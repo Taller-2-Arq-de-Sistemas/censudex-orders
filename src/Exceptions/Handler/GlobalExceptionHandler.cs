@@ -93,6 +93,12 @@ public sealed class GlobalExceptionHandler : Interceptor
                 exception.GetType().Name,
                 (int)Code.NotFound
             ),
+            UnauthorizedException =>
+            (
+                exception.Message,
+                exception.GetType().Name,
+                (int)Code.PermissionDenied
+            ),
             _ =>
             (
                 exception.Message,
