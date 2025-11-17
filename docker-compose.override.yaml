@@ -5,11 +5,17 @@ services:
     depends_on:
       orders-db:
         condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     ports:
       - "6000:8080"
-      - "6060:8081"
-    volumes:
-      - ./.docker/certs:/https:ro
+      # HTTPS port disabled for development - no certificate configured
+      # - "6060:8081"
+    # Certificate volume disabled - uncomment when HTTPS is enabled
+    # volumes:
+    #   - ./.docker/certs:/https:ro
+    networks:
+      - censudex-network
   orders-db:
     container_name: orders-db
     restart: unless-stopped
@@ -22,6 +28,8 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - censudex-network
     healthcheck:
       test:
         [
