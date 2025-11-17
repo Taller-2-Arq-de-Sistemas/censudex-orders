@@ -7,9 +7,9 @@ using CensudexOrders.Exceptions;
 namespace CensudexOrders.Orders.Queries;
 
 public record GetOrdersByUserIdQuery(string UserId) : IQuery<GetOrdersByUserIdResult>;
-public record GetOrdersByUserIdResult(int Status, List<Order> Orders);
+public record GetOrdersByUserIdResult(List<Order> Orders);
 
-internal class GetOrdersByUserIdQueryValidator
+public class GetOrdersByUserIdQueryValidator
 : AbstractValidator<GetOrdersByUserIdQuery>
 {
     public GetOrdersByUserIdQueryValidator()
@@ -26,7 +26,7 @@ internal class GetOrdersByUserIdQueryHandler(IUnitOfWork unitOfWork)
     {
         if (await unitOfWork.UsersRepository.Exists(Guid.Parse(request.UserId), cancellationToken) == false)
             throw new NotFoundException($"User with ID {request.UserId} not found.");
-        var orders = await unitOfWork.OrdersRepository.GetByUserId(request.UserId, cancellationToken);
-        return new GetOrdersByUserIdResult(200, orders);
+        var orders = await unitOfWork.OrdersRepository.GetByUserId(Guid.Parse(request.UserId), cancellationToken);
+        return new GetOrdersByUserIdResult(orders);
     }
 }
