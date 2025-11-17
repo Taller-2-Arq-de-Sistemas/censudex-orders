@@ -4,7 +4,7 @@ using CensudexOrders.CQRS;
 
 namespace CensudexOrders.Behaviors;
 
-public class ValidationBehavior<TRequest, TResponse>
+public class CommandValidationBehavior<TRequest, TResponse>
     (IEnumerable<IValidator<TRequest>> validators)
     : IPipelineBehavior<TRequest, TResponse>
     where TRequest : ICommand<TResponse>
