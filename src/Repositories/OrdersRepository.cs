@@ -12,16 +12,19 @@ public class OrdersRepository(OrdersContext context) : IOrdersRepository
         _context.Orders.Add(order);
 
     public Task<Order?> Get(int orderNumber, CancellationToken cancellationToken) =>
-        _context.Orders.FirstOrDefaultAsync(o => o.OrderNumber == orderNumber, cancellationToken);
+        _context.Orders.Include(o => o.OrderProducts)
+            .FirstOrDefaultAsync(o => o.OrderNumber == orderNumber, cancellationToken);
 
-    public void UpdateStatus(Guid orderId, string status, CancellationToken cancellationToken) =>
-        _context.Orders.Where(o => o.Id == orderId).ExecuteUpdate(o => o.SetProperty(p => p.Status, status));
+    public Task<Order?> Get(Guid orderId, CancellationToken cancellationToken) =>
+        _context.Orders.Include(o => o.OrderProducts)
+            .FirstOrDefaultAsync(o => o.Id == orderId, cancellationToken);
 
-    public void Cancel(Guid orderId, CancellationToken cancellationToken) =>
-        _context.Orders.Where(o => o.Id == orderId).ExecuteUpdate(o => o.SetProperty(p => p.Status, "cancelado"));
+    public void Update(Order order, CancellationToken cancellationToken) =>
+        _context.Orders.Update(order);
 
-    public async Task<List<Order>> GetByUserId(string userId, CancellationToken cancellationToken) =>
+    public async Task<List<Order>> GetByUserId(Guid userId, CancellationToken cancellationToken) =>
         await _context.Orders
-            .Where(o => o.CustomerId.ToString() == userId)
+            .Where(o => o.CustomerId == userId)
+            .Include(o => o.OrderProducts)
             .ToListAsync(cancellationToken);
 }

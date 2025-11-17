@@ -6,7 +6,7 @@ public interface IOrdersRepository
 {
     void Create(Order order, CancellationToken cancellationToken);
     Task<Order?> Get(int orderNumber, CancellationToken cancellationToken);
-    void UpdateStatus(Guid orderId, string status, CancellationToken cancellationToken);
-    void Cancel(Guid orderId, CancellationToken cancellationToken);
-    Task<List<Order>> GetByUserId(string userId, CancellationToken cancellationToken);
+    Task<Order?> Get(Guid orderId, CancellationToken cancellationToken);
+    void Update(Order order, CancellationToken cancellationToken);
+    Task<List<Order>> GetByUserId(Guid userId, CancellationToken cancellationToken);
 }
